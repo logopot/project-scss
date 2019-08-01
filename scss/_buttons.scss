@@ -1,0 +1,54 @@
+.btn {
+    width: 210px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: $text-color;
+    text-transform: uppercase;
+    border: 1px solid $text-color;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    transition: border-color 0.3s ease;
+	cursor: pointer;
+	@include breakpoint(mobile) {
+		width: 100%;
+	}
+}
+
+.btn:hover {
+	background: $primary-color;
+	border-color: $primary-color;
+}
+
+.primary {
+	background-color: $primary-color;
+	border: 0;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+
+.primary:hover {
+	background-color: $text-color;
+	color: $primary-color;
+}
+
+.btn-portfolio {
+	transition: background-color 0.3s ease;
+}
+
+.btn-portfolio:hover {
+	background-color: $text-color;
+	color: $primary-color;
+}
+
+.btn-show-more {
+	color: unset;
+	border-color: $service-img-border;
+	transition: background-color 0.3s ease;
+}
+
+.btn-show-more:hover {
+	background-color: $primary-color;
+	border-color: $primary-color;
+	color: $text-color;
+}

@@ -1,0 +1,131 @@
+.our-team {
+	display: flex;
+	padding: 100px 0;
+	justify-content: center;
+	text-align: center;
+}
+
+.our-team-wrapp {
+	display: flex;
+	width: $container-width;
+	flex-direction: column;
+	align-items: center;
+}
+
+.our-team-person-wrapp {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+    width: 100%;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.person-info h3 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    @include breakpoint(tablet-landscape) {
+        font-size: 1.2rem;
+    }
+}
+
+.our-team-person {
+	width: calc(100% / 4 - 50px);
+	text-align: center;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  	filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+    @include breakpoint(tablet-landscape) {
+        width: calc(100% / 2 - 25px);
+        margin-bottom: 50px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+}
+
+.our-team-person:hover {
+	-webkit-filter: unset; /* Safari 6.0 - 9.0 */
+  	filter: unset;
+  	cursor: pointer;
+}
+
+.our-team-person img {
+	width: 100%;
+	transition: all .3s ease-in-out;
+	transform-origin: bottom left;
+}
+
+.our-team-person:hover img {
+	transform: scale(1.1);
+}
+
+.our-team-person-img:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    background-color: #f76128;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+	transform-origin: bottom left;
+}
+
+.our-team-person:hover .our-team-person-img:after {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+
+/* dots */
+
+.dots-wrap-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.dots-wrapp {
+    display: flex;
+    width: 85px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.dot {
+    width: 12px;
+    height: 12px;
+    background-color: $service-img-border;
+    display: block;
+    border-radius: 100%;
+}
+
+.dot.dot-active {
+	width: 15px;
+	height: 15px;
+	background-color: $primary-color;
+}
+
+/* social icon sprite */
+
+.social-icons {
+    width: 170px;
+    height: 43px;
+    background: url(../img/social-icons.png) 0 0;
+    margin: 0 auto;
+    @include breakpoint(tablet-landscape) {
+        transform: scale(0.6);
+    }
+}

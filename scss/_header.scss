@@ -1,0 +1,55 @@
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+}
+
+header nav {
+	display: flex;
+	width: $container-width;
+	justify-content: space-between;
+	@include breakpoint(mobile) {
+		width: 90%;
+		margin-top: 10px;
+	}
+}
+
+.nav-menu {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero {
+	display: flex;
+	background: url(../img/main-banner.jpg) no-repeat;
+	width: 100%;
+	height: 860px;
+	flex-direction: column;
+}
+
+/* Logo */
+
+.logo,
+.logo span {
+	font-size: $logo-font-size;
+}
+
+.logo {
+	color: $text-color;
+}
+
+.logo span {
+	color: $primary-color;
+	font-weight: 800;
+}
+
+/* Menu */
+
+.menu {
+	color: $text-color;
+}

@@ -1,0 +1,132 @@
+.our-works {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.our-works-wrapp {
+	display: flex;
+	flex-direction: column;
+	width: $container-width;
+	align-items: center;
+}
+
+.our-works-content {
+	text-align: center;
+}
+
+.our-works-content h2, .our-works-content span {
+	font-size: 40px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.our-works-content h2 {
+	margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.our-works-content span {
+	color: $primary-color;
+}
+
+.our-works-content p {
+    width: 60%;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0 auto 100px;
+    @include breakpoint(tablet) {
+        width: 90%;
+    }
+    @include breakpoint(mobile-large) {
+        margin: 0 auto 50px;
+    }
+}
+
+.our-works-portfolio {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.our-works-portfolio-item {
+	width: calc(100% / 3 - 50px);
+    margin-bottom: 60px;
+    @include breakpoint(tablet-landscape) {
+        width: calc(100% / 2 - 25px);
+    }
+    @include breakpoint(tablet) {
+        width: calc(100% / 2 - 10px);
+        margin-bottom: 20px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.portfolio-item-content-wrapp {
+	display: none;
+    background: $primary-color-opacity;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 4px;
+    left: 0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.portfolio-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    @include breakpoint(mobile) {
+        width: 80%;
+    }
+}
+
+.portfolio-item-content h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
+
+.portfolio-item-content p {
+    color: #fff;
+    line-height: 1.7rem;
+    margin-bottom: 60px;
+    @include breakpoint(mobile) {
+        margin-bottom: 25px;
+    }
+}
+
+.our-works-portfolio-item img {
+	width: 100%;
+}
+
+.our-works-portfolio-item:hover .portfolio-item-content-wrapp {
+	display: flex;
+	opacity: 1;
+}
+
+.our-works-portfolio-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

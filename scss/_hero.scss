@@ -1,0 +1,88 @@
+.hero {
+    @include breakpoint(tablet) {
+        height: 650px;
+    }
+}
+
+.hero-content-wrapp {
+    display: flex;
+    justify-content: center;
+    height: 650px;
+    align-items: center;
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	align-items: center;
+}
+
+.hero-content h1,
+.hero-content h1 span {
+	margin-bottom: 0;
+	font-size: 6rem;
+	color: $text-color;
+    text-transform: uppercase;
+    @include breakpoint(mobile) {
+        font-size: 3rem !important;
+        margin-top: 0;
+    }
+    @include breakpoint(tablet) {
+        font-size: 2rem;
+        text-align: center;
+    }
+    @include breakpoint(tablet-large) {
+        font-size: 3rem;
+    }
+    @include breakpoint(tablet-landscape) {
+        font-size: 4rem;
+    }
+}
+
+.hero-content h1 span {
+	color: $primary-color;
+	font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    color: $text-color;
+    text-align: center;
+    width: 75%;
+    margin-bottom: 100px;
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    @include breakpoint(tablet) {
+        font-size: 1.1rem;
+    }
+    @include breakpoint(tablet-large) {
+        font-size: 1.2rem;
+    }
+}
+
+.hero-cta {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    @include breakpoint(tablet) {
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+    }
+    @include breakpoint(tablet-large) {
+        width: 100%;
+    }
+}
+
+.scroll-more {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
